@@ -4,6 +4,9 @@ import requests
 import snowflake.connector
 import sqlite3
 
+conn = sqlite3.connect('pythonDB.db')
+c = conn.cursor()
+
 streamlit.title('My Parents New Healthy Diner' )
 
 streamlit.header('Breakfast Favorites')
