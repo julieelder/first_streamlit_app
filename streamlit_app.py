@@ -42,8 +42,7 @@ streamlit.dataframe(fruityvice_normalized)
 
 # adding a text box for fruit list
 add_my_fruit = streamlit.text_input('What fruit would you like to add?')
-my_cur.execute("insert into FRUIT_LOAD_LIST values ('add_my_fruit')")
-# conn.commit()
+my_cur.execute("insert into FRUIT_LOAD_LIST values ('from streamlit')")
 streamlit.write('Thanks for adding ', add_my_fruit)
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
