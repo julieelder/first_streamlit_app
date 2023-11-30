@@ -4,7 +4,7 @@ import requests
 import snowflake.connector
 import sqlite3
 
-conn = sqlite3.connect('pythonDB.db')
+conn = sqlite3.connect('PC_RIVERY_DB.PUBLIC')
 c = conn.cursor()
 
 streamlit.title('My Parents New Healthy Diner' )
