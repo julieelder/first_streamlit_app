@@ -4,8 +4,8 @@ import requests
 import snowflake.connector
 import sqlite3
 
-conn = sqlite3.connect('PC_RIVERY_DB.PUBLIC')
-c = conn.cursor()
+# conn = sqlite3.connect('PC_RIVERY_DB.PUBLIC')
+# c = conn.cursor()
 
 streamlit.title('My Parents New Healthy Diner' )
 
@@ -42,8 +42,8 @@ streamlit.dataframe(fruityvice_normalized)
 
 # adding a text box for fruit list
 add_my_fruit = streamlit.text_input('What fruit would you like to add?')
-c.execute('insert into PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST (fruit_name) values (add_my_fruit)', add_my_fruit)
-conn.commit()
+# c.execute('insert into PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST (fruit_name) values (add_my_fruit)', add_my_fruit)
+# conn.commit()
 streamlit.write('Thanks for adding ', add_my_fruit)
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
